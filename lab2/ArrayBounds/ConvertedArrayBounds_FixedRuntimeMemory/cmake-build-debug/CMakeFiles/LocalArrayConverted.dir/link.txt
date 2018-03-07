@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/LocalArrayConverted.dir/main.c.o CMakeFiles/LocalArrayConverted.dir/contract_semantics.c.o  -o LocalArrayConverted 

@@ -34,6 +34,7 @@ Violated property:
 | `sum-to-n.asm`      | EVM assembly of the `sum-to-n.sol` contract                         |
 | `sum-to-n.op`       | EVM opcodes of the `sum-to-n.sol` contract                          |
 | `sum-to-n.op.split` | EVM opcodes of the `sum-to-n.sol` contract split onto separate lines|
+---
 The sum-to-change files are exactly the same except the code for the sum to n 
 algorithm has been removed. This enabled me to quickly identify the compiled 
 opcodes of significance by performing a `vimdiff` between the two 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/Coin/ConvertedCoin/contract_semantics.h
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/Coin/ConvertedCoin/main.c
+stdio.h
+-
+inttypes.h
+-
+contract_semantics.h
+/home/fraser/Programming/Smart-Contract-Verification/lab2/Coin/ConvertedCoin/contract_semantics.h
+

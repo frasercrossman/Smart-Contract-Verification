@@ -1,0 +1,3 @@
+/home/fraser/Programming/Smart-Contract-Verification/lab2/Coin/ConvertedCoin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/fraser/Programming/Smart-Contract-Verification/lab2/Coin/ConvertedCoin/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fraser/Programming/Smart-Contract-Verification/lab2/Coin/ConvertedCoin/cmake-build-debug/CMakeFiles/ConvertedCoin.dir

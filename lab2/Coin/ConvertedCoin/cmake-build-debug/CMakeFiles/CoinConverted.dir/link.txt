@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/CoinConverted.dir/main.c.o  -o CoinConverted 

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fraser/Programming/comp3200-labs/lab1/SumToN/ConvertedSumToN/main.c
+stdio.h
+-
+inttypes.h
+-
+

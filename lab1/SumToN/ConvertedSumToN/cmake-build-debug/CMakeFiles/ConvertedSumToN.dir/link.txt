@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/ConvertedSumToN.dir/main.c.o  -o ConvertedSumToN 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/DivByZero/ConvertedDivByZero/contract_semantics.c
+stdio.h
+-
+inttypes.h
+-
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/DivByZero/ConvertedDivByZero/contract_semantics.h
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/DivByZero/ConvertedDivByZero/main.c
+stdio.h
+-
+inttypes.h
+-
+contract_semantics.h
+/home/fraser/Programming/Smart-Contract-Verification/lab2/DivByZero/ConvertedDivByZero/contract_semantics.h
+

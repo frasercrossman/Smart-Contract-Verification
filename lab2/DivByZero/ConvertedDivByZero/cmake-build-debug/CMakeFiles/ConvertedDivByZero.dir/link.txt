@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/ConvertedDivByZero.dir/main.c.o CMakeFiles/ConvertedDivByZero.dir/contract_semantics.c.o  -o ConvertedDivByZero 

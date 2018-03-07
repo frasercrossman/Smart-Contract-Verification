@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/ArrayBounds/ConvertedArrayBounds_FixedRuntimeMemory/contract_semantics.c
+stdio.h
+-
+stdlib.h
+-
+inttypes.h
+-
+math.h
+-
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/ArrayBounds/ConvertedArrayBounds_FixedRuntimeMemory/contract_semantics.h
+
+/home/fraser/Programming/Smart-Contract-Verification/lab2/ArrayBounds/ConvertedArrayBounds_FixedRuntimeMemory/main.c
+stdio.h
+-
+inttypes.h
+-
+contract_semantics.h
+/home/fraser/Programming/Smart-Contract-Verification/lab2/ArrayBounds/ConvertedArrayBounds_FixedRuntimeMemory/contract_semantics.h
+

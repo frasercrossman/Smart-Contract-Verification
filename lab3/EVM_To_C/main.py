@@ -1,9 +1,8 @@
-import io, struct
 from opcode_values import *
 
 
 def main():
-    with open('myfile.txt', 'r') as fin:
+    with open('DAO.bytecode', 'r') as fin:
         # Read EVM data string
         data_string = fin.read()
         # Convert data string to int list (without the new line)
@@ -18,7 +17,7 @@ def main():
 
             # Stop and Arithmetic
             if data_list[i] == STOP:
-                print("stop();")
+                print("return 0; // STOP")
             elif data_list[i] == ADD:
                 print("add();")
             elif data_list[i] == MUL:
@@ -132,9 +131,9 @@ def main():
             elif data_list[i] == SSTORE:
                 print("sstore();")
             elif data_list[i] == JUMP:
-                print("jump();")
+                print("goto resolve_goto; // JUMP")
             elif data_list[i] == JUMPI:
-                print("jumpi();")
+                print("if(jumpi() == 0) goto resolve_goto; // JUMPI")
             elif data_list[i] == PC:
                 print("pc();")
             elif data_list[i] == MSIZE:
@@ -173,7 +172,7 @@ def main():
             elif data_list[i] == CALLCODE:
                 print("callcode();")
             elif data_list[i] == RETURN:
-                print("return();")
+                print("return 0; // RETURN")
             elif data_list[i] == DELEGATECALL:
                 print("delegatecall();")
             elif data_list[i] == PAYGAS:
@@ -183,7 +182,7 @@ def main():
             elif data_list[i] == CREATE2:
                 print("create2();")
             elif data_list[i] == REVERT:
-                print("revert();")
+                print("return -1; // REVERT")
             elif data_list[i] == SELFDESTRUCT:
                 print("selfdestruct();")
             else:

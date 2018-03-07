@@ -53,3 +53,6 @@ fabric.properties
 
 # Any .idea folder should be ignored
 *.idea/
+
+# Pycharm
+__pycache__/

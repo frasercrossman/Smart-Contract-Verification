@@ -18,6 +18,14 @@ int call_again() {
 
 }
 
+// DAO
+// "splitDAO(uint256,address)"
+int splitDAO = 0x82661dc4;
+
+// Managed Account
+// "payOut(address,uint256)"
+int payOut = 0x0221038a;
+
 int blank_stack[STACK_SIZE];
 int blank_memory[MEMORY_SIZE];
 int blank_storage[STORAGE_SIZE];
@@ -28,6 +36,7 @@ int contract() {
     set_memory(blank_memory);
     set_storage(blank_storage);
 
+    // EVM BOOTSTRAP - something
     push(0x60);
     push(0x40);
     mstore();
@@ -665,6 +674,8 @@ int contract() {
     pop();
     swap(1);
     goto resolve_goto; // JUMP
+
+    // EVM BOOTSTRAP - something
     push(0x60);
     push(0x40);
     dup(2);

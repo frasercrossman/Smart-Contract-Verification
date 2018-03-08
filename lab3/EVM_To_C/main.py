@@ -37,7 +37,7 @@ def main():
             elif data_list[i] == MULMOD:
                 print("mulmod();")
             elif data_list[i] == EXP:
-                print("exp();")
+                print("EVM_exp();")
             elif data_list[i] == SIGNEXTEND:
                 print("signextend();")
 
@@ -162,7 +162,7 @@ def main():
 
             # Logging
             elif LOG0 <= data_list[i] <= LOG4:
-                print("log(" + str(data_list[i] - LOG0 + 1) + ");")
+                print("EVM_log(" + str(data_list[i] - LOG0 + 1) + ");")
 
             # System
             elif data_list[i] == CREATE:

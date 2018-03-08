@@ -196,7 +196,6 @@ def main():
         print("switch(pop()) {")
         for dest in jumpdests:
             print("case " + dest + ": goto tag_" + dest + ";")
-            print("break;")
         print("default: printf('Invalid JUMP resolved');")
         print("}")
 

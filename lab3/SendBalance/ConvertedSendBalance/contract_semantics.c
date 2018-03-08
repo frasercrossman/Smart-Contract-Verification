@@ -11,6 +11,9 @@ int* storage = NULL;            /* Addressed non-volatile storage */
 int sp = -1;                    /* Stack pointer */
 int memory_size = 4;            /* Number of words used in memory - 4 is default on call */
 
+int* calldata = NULL;
+int calldata_size = 4;
+
 //#if 1
 //#define DEBUG(a) printf a
 //#else
@@ -30,6 +33,10 @@ void set_storage(int* new_storage) {
     storage = new_storage;
 }
 
+void set_calldata(int* new_calldata) {
+    calldata = new_calldata;
+}
+
 void set_stack_pointer(int new_stack_pointer) {
     sp = new_stack_pointer;
 }
@@ -44,6 +51,14 @@ void set_memory_size(int new_memory_size) {
 
 int get_memory_size() {
     return memory_size;
+}
+
+void set_calldata_size(int new_calldata_size) {
+    calldata_size = new_calldata_size;
+}
+
+int get_calldata_size() {
+    return calldata_size;
 }
 
 // 0s: Stop and Arithmetic Operations
@@ -210,14 +225,13 @@ void callvalue() {
 }
 
 void calldataload() {
-    // Incorrectly implemented
-    pop();
-    push(0x01);
+    int address = pop();
+
+    push(calldata[address]);
 }
 
 void calldatasize() {
-    // Assume calldatasize to be 0x24
-    push(0x24);
+    push(calldata_size);
 }
 
 void calldatacopy() {
@@ -437,7 +451,7 @@ void create() {
     printf("[create] value: 0x%03x, in_offset: 0x%03x, out_offset: 0x%03x\n",
            value, in_offset, out_offset);
 
-    push(0x0);              // Successfully executed
+    push(0x01);               // Successfully executed
 }
 
 void call() {
@@ -453,7 +467,7 @@ void call() {
                    "in_offset: 0x%03x, in_size: 0x%03x, out_offset: 0x%03x, out_size: 0x%03x\n",
            gas, to, value, in_offset, in_size, out_offset, out_size);
 
-    push(0x0);              // Successfully executed
+    push(0x01);             // Successfully executed
 }
 
 void callcode() {
@@ -476,7 +490,7 @@ void callcode() {
                    "in_offset: 0x%03x, in_size: 0x%03x, out_offset: 0x%03x, out_size: 0x%03x\n",
            gas, to, value, in_offset, in_size, out_offset, out_size);
 
-    push(0x0);              // Successfully executed
+    push(0x01);             // Successfully executed
 }
 
 /* This function cannot be implemented as return is a C keyword
@@ -508,7 +522,7 @@ void delegatecall() {
                    "in_offset: 0x%03x, in_size: 0x%03x, out_offset: 0x%03x, out_size: 0x%03x\n",
            gas, to, in_offset, in_size, out_offset, out_size);
 
-    push(0x0);              // Successfully executed
+    push(0x01);             // Successfully executed
 }
 
 void suicide() {

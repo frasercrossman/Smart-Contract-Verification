@@ -1,0 +1,155 @@
+DAO:
+{
+	"34145808": "totalRewardToken()",
+	"643f7cdd": "DAOpaidOut(address)",
+	"82bf6464": "DAOrewardAccount()",
+	"39d1f908": "actualBalance()",
+	"dd62ed3e": "allowance(address,address)",
+	"4df6d6cc": "allowedRecipients(address)",
+	"095ea7b3": "approve(address,uint256)",
+	"70a08231": "balanceOf(address)",
+	"e5962195": "blocked(address)",
+	"749f9889": "changeAllowedRecipients(address,bool)",
+	"e33734fd": "changeProposalDeposit(uint256)",
+	"eceb2945": "checkProposalCode(uint256,address,uint256,bytes)",
+	"4b6753bc": "closingTime()",
+	"baac5300": "createTokenProxy(address)",
+	"e66f53b7": "curator()",
+	"149acf9a": "daoCreator()",
+	"1f2dc5ef": "divisor()",
+	"237e9492": "executeProposal(uint256,bytes)",
+	"21b5b8dd": "extraBalance()",
+	"cc9ae3f6": "getMyReward()",
+	"be7c29c1": "getNewDAOAddress(uint256)",
+	"78524b2e": "halveMinQuorum()",
+	"b7bc2c84": "isFueled()",
+	"96d7f3f5": "lastTimeMinQuorumMet()",
+	"674ed066": "minQuorumDivisor()",
+	"0c3b7b96": "minTokensToCreate()",
+	"6837ff1e": "newContract(address)",
+	"612e45a3": "newProposal(address,uint256,string,bytes,uint256,bool)",
+	"8d7af473": "numberOfProposals()",
+	"81f03fcb": "paidOut(address)",
+	"f8c80d26": "privateCreation()",
+	"8b15a605": "proposalDeposit()",
+	"013cf08b": "proposals(uint256)",
+	"a3912ec8": "receiveEther()",
+	"590e1ae3": "refund()",
+	"a1da2fb9": "retrieveDAOReward(bool)",
+	"0e708203": "rewardAccount()",
+	"cdef91d0": "rewardToken(address)",
+	"82661dc4": "splitDAO(uint256,address)",
+	"18160ddd": "totalSupply()",
+	"a9059cbb": "transfer(address,uint256)",
+	"23b872dd": "transferFrom(address,address,uint256)",
+	"dbde1988": "transferFromWithoutReward(address,address,uint256)",
+	"4e10c3ee": "transferWithoutReward(address,uint256)",
+	"2632bf20": "unblockMe()",
+	"c9d27afe": "vote(uint256,bool)"
+}
+
+DAOInterface:
+{
+    "34145808": "totalRewardToken()",
+    "643f7cdd": "DAOpaidOut(address)",
+    "82bf6464": "DAOrewardAccount()",
+    "4df6d6cc": "allowedRecipients(address)",
+    "e5962195": "blocked(address)",
+    "749f9889": "changeAllowedRecipients(address,bool)",
+    "e33734fd": "changeProposalDeposit(uint256)",
+    "eceb2945": "checkProposalCode(uint256,address,uint256,bytes)",
+    "e66f53b7": "curator()",
+    "149acf9a": "daoCreator()",
+    "237e9492": "executeProposal(uint256,bytes)",
+    "cc9ae3f6": "getMyReward()",
+    "be7c29c1": "getNewDAOAddress(uint256)",
+    "78524b2e": "halveMinQuorum()",
+    "96d7f3f5": "lastTimeMinQuorumMet()",
+    "674ed066": "minQuorumDivisor()",
+    "6837ff1e": "newContract(address)",
+    "612e45a3": "newProposal(address,uint256,string,bytes,uint256,bool)",
+    "8d7af473": "numberOfProposals()",
+    "81f03fcb": "paidOut(address)",
+    "8b15a605": "proposalDeposit()",
+    "013cf08b": "proposals(uint256)",
+    "a3912ec8": "receiveEther()",
+    "a1da2fb9": "retrieveDAOReward(bool)",
+    "0e708203": "rewardAccount()",
+    "cdef91d0": "rewardToken(address)",
+    "82661dc4": "splitDAO(uint256,address)",
+    "dbde1988": "transferFromWithoutReward(address,address,uint256)",
+    "4e10c3ee": "transferWithoutReward(address,uint256)",
+    "2632bf20": "unblockMe()",
+    "c9d27afe": "vote(uint256,bool)"
+}
+
+DAO_Creator:
+{
+	"e2faf044": "createDAO(address,uint256,uint256,uint256)"
+}
+
+ManagedAccount:
+{
+	"d2cc718f": "accumulatedInput()",
+	"8da5cb5b": "owner()",
+	"0221038a": "payOut(address,uint256)",
+	"18bdc79a": "payOwnerOnly()"
+}
+
+ManagedAccountInterface:
+{
+	"d2cc718f": "accumulatedInput()",
+	"8da5cb5b": "owner()",
+	"0221038a": "payOut(address,uint256)",
+	"18bdc79a": "payOwnerOnly()"
+}
+
+Token:
+{
+	"dd62ed3e": "allowance(address,address)",
+	"095ea7b3": "approve(address,uint256)",
+	"70a08231": "balanceOf(address)",
+	"18160ddd": "totalSupply()",
+	"a9059cbb": "transfer(address,uint256)",
+	"23b872dd": "transferFrom(address,address,uint256)"
+}
+
+TokenInterface:
+{
+	"dd62ed3e": "allowance(address,address)",
+	"095ea7b3": "approve(address,uint256)",
+	"70a08231": "balanceOf(address)",
+	"18160ddd": "totalSupply()",
+	"a9059cbb": "transfer(address,uint256)",
+	"23b872dd": "transferFrom(address,address,uint256)"
+}
+
+TokenCreation:
+{
+	"dd62ed3e": "allowance(address,address)",
+	"095ea7b3": "approve(address,uint256)",
+	"70a08231": "balanceOf(address)",
+	"4b6753bc": "closingTime()",
+	"baac5300": "createTokenProxy(address)",
+	"1f2dc5ef": "divisor()",
+	"21b5b8dd": "extraBalance()",
+	"b7bc2c84": "isFueled()",
+	"0c3b7b96": "minTokensToCreate()",
+	"f8c80d26": "privateCreation()",
+	"590e1ae3": "refund()",
+	"18160ddd": "totalSupply()",
+	"a9059cbb": "transfer(address,uint256)",
+	"23b872dd": "transferFrom(address,address,uint256)"
+}
+
+TokenCreationInterface:
+{
+	"4b6753bc": "closingTime()",
+	"baac5300": "createTokenProxy(address)",
+	"1f2dc5ef": "divisor()",
+	"21b5b8dd": "extraBalance()",
+	"b7bc2c84": "isFueled()",
+	"0c3b7b96": "minTokensToCreate()",
+	"f8c80d26": "privateCreation()",
+	"590e1ae3": "refund()"
+}

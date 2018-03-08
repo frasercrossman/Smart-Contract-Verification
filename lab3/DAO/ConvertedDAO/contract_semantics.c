@@ -4,6 +4,13 @@
 #include <stdio.h>
 #include "contract_semantics.h"
 
+int* stack = NULL;              /* Stack */
+int* memory = NULL;             /* Addressed volatile memory */
+int* storage = NULL;            /* Addressed non-volatile storage */
+
+int sp = -1;                    /* Stack pointer */
+int memory_size = 4;            /* Number of words used in memory - 4 is default on call */
+
 //#if 1
 //#define DEBUG(a) printf a
 //#else
@@ -80,7 +87,7 @@ void mulmod() {
     push((pop() * pop()) % pop()); // Warning: same as smod
 }
 
-void exp() {
+void EVM_exp() {
     // Incorrectly implemented
     pop();
     pop();
@@ -412,7 +419,7 @@ void swap(int index) {
 }
 
 // a0s: Logging Operations
-void log(int index) {
+void EVM_log(int index) {
     // Incorrectly implemented
     pop();
     pop();

@@ -77,7 +77,7 @@ int contract() {
     push(0x0100);
     push(0xa8);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     swap(1);
@@ -100,7 +100,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     swap(4);
@@ -130,7 +130,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -148,7 +148,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     swap(1);
@@ -191,7 +191,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -218,14 +218,14 @@ int contract() {
     push(0x07);
     push(0x00);
     push(0x0100);
-    exp();
+    EVM_exp();
     dup(2);
     sload();
     dup(2);
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     mul();
     not();
@@ -252,7 +252,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -282,7 +282,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -297,7 +297,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -313,7 +313,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -376,7 +376,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -459,7 +459,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -479,7 +479,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -620,7 +620,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -686,7 +686,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -695,7 +695,7 @@ int contract() {
     or();
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xff);
     mul();
     not();
@@ -725,7 +725,7 @@ int contract() {
     if(jumpi() == 0) goto resolve_goto; // JUMPI
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0x00);
     calldataload();
     div();
@@ -772,7 +772,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -797,7 +797,7 @@ int contract() {
     sload();
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0xff);
@@ -812,7 +812,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(5);
     dup(2);
@@ -834,7 +834,7 @@ int contract() {
     push(0xff);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     swap(2);
     div();
@@ -848,7 +848,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -889,7 +889,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -923,7 +923,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(6);
     and();
@@ -937,7 +937,7 @@ int contract() {
     push(0x20);
     add();
     swap(1);
-    log(3);
+    EVM_log(3);
     pop();
     push(0x01);
     tag_0x4f4:
@@ -967,7 +967,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -976,7 +976,7 @@ int contract() {
     or();
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xff);
     mul();
     not();
@@ -1006,7 +1006,7 @@ int contract() {
     if(jumpi() == 0) goto resolve_goto; // JUMPI
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0x00);
     calldataload();
     div();
@@ -1053,7 +1053,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -1078,7 +1078,7 @@ int contract() {
     sload();
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0xff);
@@ -1093,7 +1093,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(5);
     dup(2);
@@ -1115,7 +1115,7 @@ int contract() {
     push(0xff);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     swap(2);
     div();
@@ -1129,7 +1129,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -1170,7 +1170,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -1204,7 +1204,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(6);
     and();
@@ -1218,7 +1218,7 @@ int contract() {
     push(0x20);
     add();
     swap(1);
-    log(3);
+    EVM_log(3);
     pop();
     push(0x01);
     tag_0x6b0:
@@ -1248,7 +1248,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -1257,7 +1257,7 @@ int contract() {
     or();
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xff);
     mul();
     not();
@@ -1287,7 +1287,7 @@ int contract() {
     if(jumpi() == 0) goto resolve_goto; // JUMPI
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0x00);
     calldataload();
     div();
@@ -1334,7 +1334,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -1359,7 +1359,7 @@ int contract() {
     sload();
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0xff);
@@ -1374,7 +1374,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(5);
     dup(2);
@@ -1396,7 +1396,7 @@ int contract() {
     push(0xff);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     swap(2);
     div();
@@ -1410,7 +1410,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -1451,7 +1451,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -1485,7 +1485,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(6);
     and();
@@ -1499,7 +1499,7 @@ int contract() {
     push(0x20);
     add();
     swap(1);
-    log(3);
+    EVM_log(3);
     pop();
     push(0x01);
     tag_0x86c:
@@ -1517,7 +1517,7 @@ int contract() {
     if(jumpi() == 0) goto resolve_goto; // JUMPI
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0x00);
     calldataload();
     div();
@@ -1772,7 +1772,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -1865,7 +1865,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(6);
     dup(7);
@@ -1909,7 +1909,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -1963,7 +1963,7 @@ int contract() {
     swap(2);
     add();
     swap(1);
-    log(4);
+    EVM_log(4);
     pop();
     push(0x01);
     tag_0xbb1:
@@ -1985,7 +1985,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -1997,7 +1997,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -2034,7 +2034,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -2161,7 +2161,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(2);
     and();
@@ -2200,7 +2200,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     balance();
@@ -2421,14 +2421,14 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     caller();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     eq();
@@ -2440,7 +2440,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(2);
     and();
@@ -2472,7 +2472,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(2);
     and();
@@ -2527,7 +2527,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -2614,7 +2614,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -2736,7 +2736,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -2753,7 +2753,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -2817,7 +2817,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x0606);
@@ -2894,7 +2894,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(3);
     dup(2);
@@ -2960,7 +2960,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3053,7 +3053,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3092,7 +3092,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3151,7 +3151,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3289,7 +3289,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(3);
     swap(1);
@@ -3327,7 +3327,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     swap(2);
@@ -3352,7 +3352,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -3411,7 +3411,7 @@ int contract() {
     swap(2);
     add();
     swap(1);
-    log(3);
+    EVM_log(3);
     push(0x10);
     sload();
     push(0x16);
@@ -3459,7 +3459,7 @@ int contract() {
     push(0x20);
     add();
     swap(1);
-    log(2);
+    EVM_log(2);
     tag_0x1406:
     push(0x01);
     swap(2);
@@ -3498,19 +3498,19 @@ int contract() {
     sload();
     swap(1);
     push(0x0100);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0xd2cc718f);
@@ -3519,7 +3519,7 @@ int contract() {
     dup(2);
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     dup(2);
     mstore();
@@ -3555,7 +3555,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(2);
     swap(1);
@@ -3574,7 +3574,7 @@ int contract() {
     sload();
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xd2cc718f);
     mul();
     dup(3);
@@ -3584,7 +3584,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(3);
     swap(1);
@@ -3631,7 +3631,7 @@ int contract() {
     mload();
     push(0xe1);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0x011081c5);
     mul();
     dup(3);
@@ -3639,7 +3639,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(5);
     swap(1);
@@ -3687,7 +3687,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -3726,7 +3726,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0xbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d);
@@ -3738,7 +3738,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3772,7 +3772,7 @@ int contract() {
     swap(2);
     sub();
     swap(1);
-    log(3);
+    EVM_log(3);
     push(0x14);
     push(0x00);
     pop();
@@ -3781,7 +3781,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3822,7 +3822,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3851,7 +3851,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -3938,7 +3938,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     caller();
     and();
@@ -4019,7 +4019,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -4070,7 +4070,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -4119,7 +4119,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -4150,7 +4150,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -4193,7 +4193,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -4222,7 +4222,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     swap(2);
@@ -4236,7 +4236,7 @@ int contract() {
     push(0x20);
     add();
     swap(1);
-    log(4);
+    EVM_log(4);
     pop();
     swap(3);
     swap(2);
@@ -4287,12 +4287,12 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x60);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     dup(2);
     mstore();
@@ -4398,7 +4398,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(10);
     dup(2);
@@ -4463,14 +4463,14 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     tag_0x19ce:
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(2);
     and();
@@ -4496,7 +4496,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -4516,19 +4516,19 @@ int contract() {
     sload();
     swap(1);
     push(0x0100);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0xd2cc718f);
@@ -4537,7 +4537,7 @@ int contract() {
     dup(2);
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     dup(2);
     mstore();
@@ -4641,14 +4641,14 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     caller();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     eq();
@@ -4743,7 +4743,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -4854,7 +4854,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -4874,7 +4874,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -5014,7 +5014,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -5110,12 +5110,12 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x60);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     dup(2);
     mstore();
@@ -5193,7 +5193,7 @@ int contract() {
     add();
     push(0x00);
     push(0x0100);
-    exp();
+    EVM_exp();
     dup(2);
     sload();
     dup(2);
@@ -5214,7 +5214,7 @@ int contract() {
     add();
     push(0x00);
     push(0x0100);
-    exp();
+    EVM_exp();
     dup(2);
     sload();
     dup(2);
@@ -5291,7 +5291,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -5317,7 +5317,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(11);
     and();
@@ -5421,7 +5421,7 @@ int contract() {
     push(0x20);
     sub();
     push(0x0100);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -5446,7 +5446,7 @@ int contract() {
     swap(2);
     sub();
     swap(1);
-    log(3);
+    EVM_log(3);
     pop();
     swap(7);
     swap(6);
@@ -5481,7 +5481,7 @@ int contract() {
     sub();
     add();
     swap(1);
-    log(3);
+    EVM_log(3);
     tag_0x1f10:
     pop();
     pop();
@@ -5602,13 +5602,13 @@ int contract() {
     sload();
     swap(1);
     push(0x0100);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(5);
@@ -5625,12 +5625,12 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x60);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     dup(2);
     mstore();
@@ -5719,7 +5719,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -5742,7 +5742,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -5764,7 +5764,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -5786,7 +5786,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -5808,7 +5808,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -5830,7 +5830,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -5960,7 +5960,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(2);
     swap(1);
@@ -6038,17 +6038,17 @@ int contract() {
     mload();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     push(0x68);
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     eq();
     tag_0x21f8:
@@ -6073,17 +6073,17 @@ int contract() {
     mload();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     push(0x37);
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     eq();
     tag_0x2228:
@@ -6108,17 +6108,17 @@ int contract() {
     mload();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     push(0xff);
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     eq();
     tag_0x2258:
@@ -6143,17 +6143,17 @@ int contract() {
     mload();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     push(0x1e);
     push(0xf8);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     eq();
     tag_0x2288:
@@ -6166,7 +6166,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -6211,7 +6211,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -6246,7 +6246,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(2);
     swap(1);
@@ -6338,19 +6338,19 @@ int contract() {
     sload();
     swap(1);
     push(0x0100);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(5);
@@ -6410,7 +6410,7 @@ int contract() {
     push(0x20);
     sub();
     push(0x0100);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -6523,7 +6523,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -6554,7 +6554,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -6582,7 +6582,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -6643,7 +6643,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     eq();
@@ -6659,7 +6659,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -6668,7 +6668,7 @@ int contract() {
     swap(1);
     dup(4);
     swap(1);
-    log(3);
+    EVM_log(3);
     push(0x40);
     dup(1);
     mload();
@@ -6680,7 +6680,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(6);
     dup(2);
@@ -6778,7 +6778,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -6894,7 +6894,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -6950,7 +6950,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -7035,7 +7035,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     not();
     and();
@@ -7069,7 +7069,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -7086,7 +7086,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     balance();
@@ -7147,7 +7147,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -7234,7 +7234,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -7289,7 +7289,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -7340,7 +7340,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -7383,7 +7383,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -7443,7 +7443,7 @@ int contract() {
     swap(2);
     add();
     swap(1);
-    log(4);
+    EVM_log(4);
     push(0x2138);
     caller();
     push(0x086c);
@@ -7454,7 +7454,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -7501,7 +7501,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -7581,7 +7581,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(3);
     dup(2);
@@ -7618,7 +7618,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(2);
     dup(2);
@@ -7645,7 +7645,7 @@ int contract() {
     sload();
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xd2cc718f);
     mul();
     dup(4);
@@ -7709,7 +7709,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -7738,7 +7738,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     caller();
     dup(2);
@@ -7765,7 +7765,7 @@ int contract() {
     sload();
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xd2cc718f);
     mul();
     dup(4);
@@ -7822,7 +7822,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -7854,19 +7854,19 @@ int contract() {
     sload();
     swap(1);
     push(0x0100);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x0221038a);
@@ -7874,7 +7874,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x0e708203);
@@ -7883,7 +7883,7 @@ int contract() {
     dup(2);
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     dup(2);
     mstore();
@@ -7917,7 +7917,7 @@ int contract() {
     mload();
     push(0xe1);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0x011081c5);
     mul();
     dup(3);
@@ -7925,7 +7925,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x04);
@@ -7983,7 +7983,7 @@ int contract() {
     sload();
     push(0xe1);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0x011081c5);
     mul();
     dup(3);
@@ -7991,7 +7991,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(6);
     dup(2);
@@ -8054,7 +8054,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     caller();
     and();
@@ -8220,14 +8220,14 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     caller();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     eq();
@@ -8240,7 +8240,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -8280,7 +8280,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     swap(1);
     dup(2);
@@ -8298,7 +8298,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -8341,7 +8341,7 @@ int contract() {
     swap(2);
     add();
     swap(1);
-    log(3);
+    EVM_log(3);
     pop();
     push(0x01);
     push(0x033f);
@@ -8356,7 +8356,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x00);
@@ -8389,7 +8389,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     caller();
     dup(2);
@@ -8449,7 +8449,7 @@ int contract() {
     swap(2);
     add();
     swap(1);
-    log(4);
+    EVM_log(4);
     pop();
     push(0x01);
     push(0x033f);
@@ -8463,7 +8463,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(5);
     and();
@@ -8501,7 +8501,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(3);
@@ -8532,7 +8532,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     dup(2);
@@ -8617,7 +8617,7 @@ int contract() {
     swap(2);
     add();
     swap(1);
-    log(4);
+    EVM_log(4);
     pop();
     push(0x01);
     push(0x2528);
@@ -8631,7 +8631,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     dup(2);
@@ -8658,7 +8658,7 @@ int contract() {
     mload();
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xd2cc718f);
     mul();
     dup(2);
@@ -8721,7 +8721,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     dup(2);
@@ -8748,7 +8748,7 @@ int contract() {
     mload();
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     push(0xd2cc718f);
     mul();
     dup(2);
@@ -8810,19 +8810,19 @@ int contract() {
     sload();
     swap(1);
     push(0x0100);
-    exp();
+    EVM_exp();
     swap(1);
     div();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     push(0x0221038a);
@@ -8833,7 +8833,7 @@ int contract() {
     dup(4);
     push(0xe0);
     push(0x02);
-    exp();
+    EVM_exp();
     mul();
     dup(2);
     mstore();
@@ -8844,7 +8844,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     and();
     dup(2);
@@ -8893,7 +8893,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -8922,7 +8922,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(7);
     and();
@@ -8957,7 +8957,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(6);
     dup(2);
@@ -9036,7 +9036,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();
@@ -9092,7 +9092,7 @@ int contract() {
     push(0x01);
     push(0xa0);
     push(0x02);
-    exp();
+    EVM_exp();
     sub();
     dup(4);
     and();

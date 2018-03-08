@@ -6,13 +6,6 @@
 #define MEMORY_SIZE 512         /* volatile memory size */
 #define STORAGE_SIZE 512        /* non-volatile storage size */
 
-int* stack = NULL;              /* Stack */
-int* memory = NULL;             /* Addressed volatile memory */
-int* storage = NULL;            /* Addressed non-volatile storage */
-
-int sp = -1;                    /* Stack pointer */
-int memory_size = 4;            /* Number of words used in memory - 4 is default on call */
-
 // Stack, Memory, and Storage Array Settings
 void set_stack(int* new_stack);
 void set_memory(int* new_memory);
@@ -35,7 +28,7 @@ void mod();
 void smod();
 void addmod();
 void mulmod();
-void exp();
+void EVM_exp();
 void signextend();
 
 // 10s: Comparison & Bitwise Logic Operations
@@ -97,7 +90,7 @@ void dup(int index);
 void swap(int index);
 
 // a0s: Logging Operations
-void log(int index);
+void EVM_log(int index);
 
 // f0s: System operations
 void create();

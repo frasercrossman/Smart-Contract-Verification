@@ -21,27 +21,27 @@ int main() {
 // Used by bootstrap_contract
 int b_stack[STACK_SIZE];
 int b_memory[MEMORY_SIZE];
+int b_calldata[CALL_DATA_SIZE];
 int b_storage[STORAGE_SIZE];
 int b_sp = -1;
 int b_memory_size = 4;
+int b_calldata_size = 4;
 
-int b_calldata[4];
-
-// Used by contract
+// Used by primary call
 int p_stack[STACK_SIZE];
 int p_memory[MEMORY_SIZE];
+int p_calldata[CALL_DATA_SIZE];
 int p_sp = -1;
 int p_memory_size = 4;
+int p_calldata_size = 4;
 
-int p_calldata[4];
-
-// Used by call again
+// Used by secondary call
 int s_stack[STACK_SIZE];
 int s_memory[MEMORY_SIZE];
+int s_calldata[CALL_DATA_SIZE];
 int s_sp = -1;
 int s_memory_size = 4;
-
-int s_calldata[4];
+int s_calldata_size = 4;
 
 int bootstrap_contract() {
     // Initialize memory storage and stack
@@ -55,11 +55,13 @@ int bootstrap_contract() {
     // Only the parameters are set below:
     b_calldata[0] = 0x5fd8c710; // function sig
     set_calldata(b_calldata);
+    set_calldata_size(b_calldata_size);
 
     // Quickly getting this to work, 0x1 (True), 0x141516 (caller)
     push(0x1141516);
     push(0x0);
     sstore();
+
     /*push(0x60);
     push(0x40);
     mstore();
@@ -171,13 +173,15 @@ int primary_call() {
     // calling payOut(address,uint256)
     p_calldata[0x00] = 0x0221038a; // function signiture
     p_calldata[0x04] = 0x141516; // address (160 bits) me = 0x141516
-    p_calldata[0x24] = 10; // amount (uint256)
+    p_calldata[0x24] = 0xa; // amount (uint256)
     set_calldata(p_calldata);
+    p_calldata_size = 0x44;
+    set_calldata_size(p_calldata_size);
 
     push(0x60);
     push(0x40);
     mstore();
-    calldatasize();
+    calldatasize(); // 0x44 (68)
     iszero();
     push(0x005e);
     if(jumpi() == 0) goto resolve_goto; // JUMPI
@@ -403,7 +407,7 @@ int primary_call() {
     EVM_exp();
     swap(1);
     div();
-    push(0xffffffff);
+    push(0x00ffffff);
     and();
     push(0xffffffff);
     and();
@@ -425,7 +429,7 @@ int primary_call() {
     if(jumpi() == 0) goto resolve_goto; // JUMPI
     pop();
     push(0x00);
-    push(0x14);
+    push(0x03);//push(0x14); size of address
     swap(1);
     sload();
     swap(1);
@@ -449,7 +453,7 @@ int primary_call() {
     EVM_exp();
     swap(1);
     div();
-    push(0xffffffff);
+    push(0x00ffffff);
     and();
     push(0xffffffff);
     and();
@@ -538,6 +542,8 @@ int primary_call() {
     swap(2);
     pop();
     pop();
+    goto resolve_goto; // JUMP
+
 
     resolve_goto:
     switch(pop()) {

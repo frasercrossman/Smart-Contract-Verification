@@ -5,21 +5,22 @@
 #define STACK_SIZE 1024         /* max stack depth */
 #define MEMORY_SIZE 512         /* volatile memory size */
 #define STORAGE_SIZE 512        /* non-volatile storage size */
+#define CALL_DATA_SIZE 512        /* non-volatile storage size */
 
 // Stack, Memory, and Storage Array Settings
 void set_stack(int* new_stack);
 void set_memory(int* new_memory);
-void set_storage(int* new_storage);
 void set_calldata(int* new_calldata);
+void set_storage(int* new_storage);
 
 void set_stack_pointer(int new_stack_pointer);
 int get_stack_pointer();
 
-void set_calldata_size(int new_calldata_size);
-int get_calldata_size();
-
 void set_memory_size(int new_memory_size);
 int get_memory_size();
+
+void set_calldata_size(int new_calldata_size);
+int get_calldata_size();
 
 // 0s: Stop and Arithmetic Operations
 void stop();

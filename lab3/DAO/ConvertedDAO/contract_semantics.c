@@ -6,19 +6,13 @@
 
 int* stack = NULL;              /* Stack */
 int* memory = NULL;             /* Addressed volatile memory */
+int* calldata = NULL;           /* Addressed volatile memory send on contract call */
 int* storage = NULL;            /* Addressed non-volatile storage */
 
 int sp = -1;                    /* Stack pointer */
 int memory_size = 4;            /* Number of words used in memory - 4 is default on call */
+int calldata_size = 4;          /* Number of words used in calldata  - 4 is default on call */
 
-int* calldata = NULL;
-int calldata_size = 4;
-
-//#if 1
-//#define DEBUG(a) printf a
-//#else
-//#define DEBUG(a) (void)0
-//#endif
 
 // Stack, Memory, and Storage Array Settings
 void set_stack(int* new_stack) {
@@ -29,12 +23,12 @@ void set_memory(int* new_memory) {
     memory = new_memory;
 }
 
-void set_storage(int* new_storage) {
-    storage = new_storage;
-}
-
 void set_calldata(int* new_calldata) {
     calldata = new_calldata;
+}
+
+void set_storage(int* new_storage) {
+    storage = new_storage;
 }
 
 void set_stack_pointer(int new_stack_pointer) {
@@ -470,7 +464,7 @@ void call() {
                    "in_offset: 0x%03x, in_size: 0x%03x, out_offset: 0x%03x, out_size: 0x%03x\n",
            gas, to, value, in_offset, in_size, out_offset, out_size);
 
-    push(0x01);             // Successfully executed
+    push(0x00);             // Successfully executed
 }
 
 void callcode() {
@@ -493,7 +487,7 @@ void callcode() {
                    "in_offset: 0x%03x, in_size: 0x%03x, out_offset: 0x%03x, out_size: 0x%03x\n",
            gas, to, value, in_offset, in_size, out_offset, out_size);
 
-    push(0x01);             // Successfully executed
+    push(0x00);             // Successfully executed
 }
 
 /* This function cannot be implemented as return is a C keyword
@@ -525,7 +519,7 @@ void delegatecall() {
                    "in_offset: 0x%03x, in_size: 0x%03x, out_offset: 0x%03x, out_size: 0x%03x\n",
            gas, to, in_offset, in_size, out_offset, out_size);
 
-    push(0x01);             // Successfully executed
+    push(0x00);             // Successfully executed
 }
 
 void suicide() {

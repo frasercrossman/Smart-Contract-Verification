@@ -2,7 +2,7 @@ from opcode_values import *
 
 
 def main():
-    with open('DAO.bytecode', 'r') as fin:
+    with open('ManagedAccount.bytecode', 'r') as fin:
         # Read EVM data string
         data_string = fin.read()
         # Convert data string to int list (without the new line)
@@ -11,9 +11,12 @@ def main():
         jumpdests = []
 
         i = 0
+        pc = -1
+        bootstrap_code_found = False
         while i < len(data_list) - 1:
+            pc = pc + 1
             # Print line number:
-            # print("[" + str(i) + "]", end='')
+            # print("[" + hex(pc) + "]", end='')
 
             # Stop and Arithmetic
             if data_list[i] == STOP:
@@ -142,14 +145,15 @@ def main():
                 print("gas();")
             elif data_list[i] == JUMPDEST:
                 # Keep track of jump destinations
-                jumpdests.append(hex(i))
-                print("tag_" + hex(i) + ":")
+                jumpdests.append(hex(pc))
+                print("tag_" + hex(pc) + ":")
 
             # Push Operations
             elif PUSH1 <= data_list[i] <= PUSH32:
                 hex_val = ''.join(['{:02x}'.format(data_list[n]) for n in range(i + 1, i + 2 + data_list[i] - PUSH1)])
                 print("push(0x" + hex_val + ");")
                 # Progress the program counter appropriately
+                pc = pc + data_list[i] - PUSH1 + 1
                 i = i + data_list[i] - PUSH1 + 1
 
             # Duplicate Operations
@@ -173,6 +177,10 @@ def main():
                 print("callcode();")
             elif data_list[i] == RETURN:
                 print("return 0; // RETURN")
+                if bootstrap_code_found == False:
+                    bootstrap_code_found = True
+                    # Detect Bootstrap/Bin runtime divide
+                    pc = -1
             elif data_list[i] == DELEGATECALL:
                 print("delegatecall();")
             elif data_list[i] == PAYGAS:

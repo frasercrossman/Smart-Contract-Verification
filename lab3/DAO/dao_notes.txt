@@ -1,0 +1,11 @@
+calling payOut:
+line 225: calldataload of 0x04 (address _recipient)
+line 233: calldataload of 0x24 (uint _amount)
+
+line 386: sload of 0x00 (address _owner) -> returns 0
+
+000000000000000000000000ca35b7d915458ef540ade6068dfe2f44e8fa733c
+0000000000000000000000000000000000000000000000000000000000000001
+
+at the end of the call data you can find the two values
+if the value is zero it will be ommited so be careful.

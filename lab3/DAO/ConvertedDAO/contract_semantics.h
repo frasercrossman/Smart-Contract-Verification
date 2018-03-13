@@ -10,9 +10,13 @@
 void set_stack(int* new_stack);
 void set_memory(int* new_memory);
 void set_storage(int* new_storage);
+void set_calldata(int* new_calldata);
 
 void set_stack_pointer(int new_stack_pointer);
 int get_stack_pointer();
+
+void set_calldata_size(int new_calldata_size);
+int get_calldata_size();
 
 void set_memory_size(int new_memory_size);
 int get_memory_size();
